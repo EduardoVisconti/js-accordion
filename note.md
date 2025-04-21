@@ -2,8 +2,15 @@
 
 2. No css, estilizar a borda com red, pra ser visível >> acc button Display tem que ser block (procurar saber o pq) com largura 100%. Colocar o cursos com bg transparente, padding e margin top >> acc cont, onde vai ter o overflow hidden e a altura (0 ou auto)
 
-3. JS: criar a const e select todos (com a tag) os botoes, e para cada item (button =>{ = adicionar o evento do click para executar > criar uma const accordionContent e button.nextelementsibling (seleciona o próximo "irmão") > adiciona a classe com toggle nos botoes ('active') >> if dentro do botao contains active = acccontent.style.maxheight = acccontent.scrollheight + px [ALTURA AUTOMÁTICO DO SCROLL, volta a altura da dimensão da div] >> else >> acccont.style.maxheight = 0
+3. JS: pegar o document. e selecionar todas as tags do botao, e para cada item (button =>{ = adicionar o evento do click em uma arrow function V
 
-4. E pra ficar correto a forma de comeco, esta todos fechados assim que abre, no comeco do arquivo selecionar todos os .acccontent, e para cada item fazer um arrow function e colocar o item.style.maxheight no 0.
+- criar uma const accordionContent com button.nextElementSibling (seleciona o próximo "irmão")
+- no botao adicionar a classe toggle ('active')
 
-se estiver ativo tem que estar na altura automática 
+- if no botao classList contains active = accordionContent.style.maxHeight = accordionContent.scrollHeight + px [ALTURA AUTOMÁTICO DO SCROLL, volta a altura da dimensão da div]
+
+- else > accordionContent.style.maxHeight = 0
+
+4. E pra ficar correto a forma de começo, esta todos fechados assim que abre, no começo do arquivo selecionar todos os .accordionContent, e para cada item fazer um arrow function e colocar o item.style.maxHeight no 0.
+
+se estiver ativo tem que estar na altura automática
